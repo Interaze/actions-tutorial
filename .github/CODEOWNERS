@@ -1,0 +1,4 @@
+* @interaze
+*.js @interaze
+*.yml @interaze2
+/public/ @interaze
