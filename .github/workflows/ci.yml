@@ -1,9 +1,9 @@
 name: CI
 on:
   pull_request:
-    branches: [develop, main]
+    branches: [develop, master]
   push: #is what happens when merge occurs due to PR
-    branches: [develop, main]
+    branches: [develop, master]
 
 jobs:
   build:
@@ -42,7 +42,7 @@ jobs:
           path: build
       #- uses: actions/download-artifact use to download artifacts
       - name: Create a Release
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
