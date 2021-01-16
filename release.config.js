@@ -1,5 +1,5 @@
 module.exports = {
-  branches: "master",
+  branches: "main",
   repositoryUrl: "https://github.com/Interaze/actions-tutorial",
   plugins: [
     "@semantic-release/commit-analyzer",
